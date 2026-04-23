@@ -1,12 +1,12 @@
 import pydantic
 
-class RAGChunkAndSRC(pydantic.BaseModel):
-    chunk: list[str]
+class RAGChunkAndSrc(pydantic.BaseModel):
+    chunks: list[str]
     source_id : str = None
 
 class RAGUpsertResult(pydantic.BaseModel):
     ingested: int
-
+    
 class RAGSearchResult(pydantic.BaseModel):
     contexts: list[str]
     sources: list[str]

@@ -27,7 +27,7 @@ def load_and_chunk_pdf(path: str):
 #EMBDDING = MAKING VECTORS OF THE CHUNCKED DATA
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    response = client.embedding.create(
+    response = client.embeddings.create(
         model = EMBEDDING_MODEL,
         input = texts,
     )
