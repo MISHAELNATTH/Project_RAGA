@@ -1,5 +1,5 @@
 #Llama_index to load in documents and create an index (create vectors)
-
+import os
 from openai import OpenAI
 from llama_index.readers.file import PDFReader
 from llama_index.core.node_parser import SentenceSplitter
@@ -7,9 +7,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI()
-EMBEDDING_MODEL = "text-embedding-3-large"
-EMBEDDING_DIM = 3072
+client = OpenAI(
+    base_url="https://integrate.api.nvidia.com/v1",
+    api_key=os.environ["NVIDIA_API_KEY"]
+)
+EMBEDDING_MODEL = "nvidia/nv-embed-v1"
+EMBEDDING_DIM = 4096
 
 splitter = SentenceSplitter(chunk_size=1000, chunk_overlap=200)
 
