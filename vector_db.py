@@ -1,3 +1,5 @@
+#upload vectors and search for vfectors in qdrant vector database
+
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance, PointStruct
 
