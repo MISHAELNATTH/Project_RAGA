@@ -10,6 +10,7 @@ dependencies = [
     "llama-index-readers-file>=0.6.0",
     "openai>=2.31.0",
     "python-dotenv>=1.2.2",
+    "python-multipart>=0.0.26",
     "qdrant-client>=1.17.1",
     "streamlit>=1.56.0",
     "uvicorn>=0.44.0",
